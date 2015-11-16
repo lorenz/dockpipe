@@ -1,0 +1,8 @@
+[package]
+name = "dockpipe"
+version = "0.1.0"
+authors = ["Lorenz Brun <lorenz@dolansoft.org>"]
+
+[dependencies]
+getopts = "0.2"
+uuid = "0.1.18"
