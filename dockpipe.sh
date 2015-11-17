@@ -17,7 +17,7 @@ do
 		RETURN)
 			RETURN_LID=$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 32)
 			docker build -t dockpipe-$RETURN_LID -f $DF-$MODE $2
-			CID=$(docker create dockpipe-$RETURN_LID)
+			CID=$(docker create dockpipe-$RETURN_LID "")
 			docker cp "$CID:$(echo "$COMMAND" | awk '{print $2}')" $TARGET/.dockpipe/ret-$RETURN_LID
 			docker rm -f $CID
 			
