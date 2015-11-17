@@ -1,5 +1,5 @@
 types:
-	- build
+  - build
   - test
 
 build-docker:
