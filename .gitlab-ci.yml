@@ -1,0 +1,13 @@
+types:
+	- build
+  - test
+
+build-docker:
+  script:
+    - docker build -t docker.dolansoft.org/lorenz/dockpipe:$CI_BUILD_REF
+    - docker push docker.dolansoft.org/lorenz/dockpipe:$CI_BUILD_REF
+  tags:
+    - v2
+    - docker
+  except:
+    - tags
