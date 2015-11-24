@@ -4,11 +4,6 @@
 ## Example
 ```
 FROM ubuntu:14.04
-ADD dist /dist
-ADD api/target/release/api /server
-CMD ["/server"]
-
-FROM ubuntu:14.04
 
 SUB schickling/rust
 ADD api /source
