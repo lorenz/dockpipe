@@ -8,7 +8,6 @@ rm -Rf .dockpipe
 mkdir -p .dockpipe
 while read COMMAND
 do
-	echo $COMMAND
 	case "$(echo "$COMMAND" | awk '{print $1}')" in
 		SUB)
 			MODE="sub"
@@ -22,7 +21,7 @@ do
 			docker rm -f $CID
 			
 			MODE="root"
-			echo "ADD .dockpipe/ret-$RETURN_LID $(echo "$COMMAND" | awk '{print $3}')" >> $DF-$MODE
+			echo "COPY .dockpipe/ret-$RETURN_LID $(echo "$COMMAND" | awk '{print $3}')" >> $DF-$MODE
 		;;
 		*)
 			echo "$COMMAND" >> $DF-$MODE
