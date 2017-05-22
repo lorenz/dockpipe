@@ -1,6 +1,8 @@
 # Dockpipe
 *A docker build pipeline with subcontainers*
 
+**IMPORTANT: Please use the new Docker Multistage builds (https://docs.docker.com/engine/userguide/eng-image/multistage-build/#use-multi-stage-builds) instead of this, they are better integrated into Docker than Dockpipe could ever be.**
+
 ## Example
 ```
 # Base image for the resulting image
